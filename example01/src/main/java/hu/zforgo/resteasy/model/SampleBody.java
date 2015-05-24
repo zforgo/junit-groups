@@ -1,4 +1,4 @@
-package hu.zforgo.resteasy;
+package hu.zforgo.resteasy.model;
 
 import java.io.Serializable;
 

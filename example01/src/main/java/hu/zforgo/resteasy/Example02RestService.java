@@ -1,5 +1,7 @@
 package hu.zforgo.resteasy;
 
+import hu.zforgo.resteasy.model.SampleBody;
+
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.HeaderParam;
