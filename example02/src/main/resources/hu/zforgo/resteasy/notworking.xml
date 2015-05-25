@@ -1,0 +1,4 @@
+<entry id="notworking">
+	<variable name="name" value="John Doe"/>
+	<variable name="age" value="21"/>
+</entry>
