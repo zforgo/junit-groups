@@ -16,6 +16,7 @@
 <modules>
 	<module>01-basics</module>
 	<module>02-readers</module>
+	<module>03-interceptors</module>
 </modules>
 	<dependencyManagement>
 		<dependencies>

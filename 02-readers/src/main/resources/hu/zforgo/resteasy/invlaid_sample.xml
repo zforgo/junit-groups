@@ -1,0 +1,7 @@
+<entry id="sample">
+	<variable name="requestId" value="123456"/>
+	<variable name="customerId" value="abcd"/>
+	<variable name="country" value="Hungary"/>
+	<variable name="city" value="Budapest"/>
+	<variable name="name" value="John Doe"/>
+</entry>
