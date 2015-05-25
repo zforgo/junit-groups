@@ -8,7 +8,7 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>example01</artifactId>
+	<artifactId>01-basics</artifactId>
 	<packaging>war</packaging>
 
 	<dependencies>

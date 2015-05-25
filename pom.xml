@@ -14,8 +14,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 <modules>
-	<module>example01</module>
-	<module>example02</module>
+	<module>01-basics</module>
+	<module>02-readers</module>
 </modules>
 	<dependencyManagement>
 		<dependencies>
