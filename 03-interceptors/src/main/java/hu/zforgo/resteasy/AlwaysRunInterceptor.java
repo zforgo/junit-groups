@@ -8,15 +8,24 @@ import org.jboss.resteasy.spi.interception.PreProcessInterceptor;
 
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.ext.Provider;
 
 @Provider
 @RequestScoped
 public class AlwaysRunInterceptor implements PreProcessInterceptor {
 
+	@Context
+	HttpHeaders headers;
+
+	public static final String X_ARRIVED = "X-Arrived";
+
 	@Override
 	public ServerResponse preProcess(HttpRequest request, ResourceMethod method) throws Failure, WebApplicationException {
-		request.getHttpHeaders().getRequestHeaders().add("X-Arrived", String.valueOf(System.currentTimeMillis()));
+		long systime = System.currentTimeMillis();
+		request.setAttribute(X_ARRIVED, systime);
+		request.getHttpHeaders().getRequestHeaders().add(X_ARRIVED, String.valueOf(systime));
 		return null;
 	}
 }

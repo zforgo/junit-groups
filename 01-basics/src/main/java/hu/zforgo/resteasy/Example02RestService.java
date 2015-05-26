@@ -4,6 +4,7 @@ import hu.zforgo.resteasy.model.SampleBody;
 
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -37,5 +38,15 @@ public class Example02RestService {
 			body.setBar(bar);
 		}
 		return Response.ok(body).build();
+	}
+
+	@GET
+	@Path("/entity")
+	public SampleBody entityResponse() {
+		SampleBody res = new SampleBody();
+		res.setFoo(12);
+		res.setBar("Bar, ez csak egy bar");
+		res.setName("Sample Name");
+		return res;
 	}
 }
