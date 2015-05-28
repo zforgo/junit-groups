@@ -1,1 +1,3 @@
-# junit-groups
+# 03-interceptors
+	elő- utófeldolgozás
+	kivételkezelés
