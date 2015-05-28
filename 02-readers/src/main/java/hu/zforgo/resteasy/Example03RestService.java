@@ -19,7 +19,7 @@ public class Example03RestService {
 
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
-	@Path("/string")
+	@Path("/object")
 	public Response bodyRead(Object dto) {
 		return Response.ok("Body found: " + dto).build();
 	}

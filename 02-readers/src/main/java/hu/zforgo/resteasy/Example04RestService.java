@@ -1,5 +1,6 @@
 package hu.zforgo.resteasy;
 
+import hu.zforgo.resteasy.model.request.ExampleDTO;
 import hu.zforgo.resteasy.model.request.NotWorkingDTO;
 
 import javax.ws.rs.GET;
@@ -16,5 +17,12 @@ public class Example04RestService {
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response bodyRead(@QueryParam("xml") NotWorkingDTO dto) {
 		return Response.ok("Body found: " + dto.getName()).build();
+	}
+
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	@Path("/works")
+	public Response workingBodyRead(@QueryParam("xml") ExampleDTO dto) {
+		return Response.ok("Body found: " + dto.getRequestId()).build();
 	}
 }
